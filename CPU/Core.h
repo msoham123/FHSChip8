@@ -16,6 +16,11 @@ class Core {
      * */
     unsigned char V[16];
 
+    // One 16-bit index register called I which is used to point at locations in memory
+    unsigned short I;
+
+
+
 
 
 
