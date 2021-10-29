@@ -13,17 +13,17 @@ class Core {
      * */
     unsigned char display[64 * 32];
 
-    // A program counter, often called PC, which points at the current instruction in memory
-    unsigned short PC;
+    // A program counter which points at the current instruction in memory
+    unsigned short programCounter;
 
-    // One 16-bit index register called I which is used to point at locations in memory
-    unsigned short I;
+    // One 16-bit index register which is used to point at locations in memory
+    unsigned short indexRegister;
 
     // A stack for 16-bit addresses, which is used to call subroutines/functions and return from them
     unsigned short stack[16];
 
     // A stack pointer points to the level of the stack which is being used
-    unsigned short SP;
+    unsigned short stackPointer;
 
     // An 8-bit delay timer which is decremented at a rate of 60 Hz (60 times per second) until it reaches 0
     unsigned char delayTimer;
@@ -35,7 +35,7 @@ class Core {
      * The Chip-8 has 16 8-bit (one byte) general-purpose variable registers numbered
      * 0 through F hexadecimal (0 through 15 in decimal) called V0 through VF
      * */
-    unsigned char V[16];
+    unsigned char variableRegisters[16];
 
 };
 
