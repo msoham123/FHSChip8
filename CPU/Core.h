@@ -63,6 +63,16 @@ class Core {
             0xF0, 0x80, 0xF0, 0x80, 0x80  // F
             };
 
+    //Helper Methods
+
+    void fetch();
+    void execute();
+    void decode();
+
+    public:
+        void initialize();
+        void emulateCycle();
+
 };
 
 #endif
