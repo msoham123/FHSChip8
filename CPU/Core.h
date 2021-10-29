@@ -22,6 +22,11 @@ class Core {
     // A program counter, often called PC, which points at the current instruction in memory
     unsigned short PC;
 
+    /*
+     * The display is 64 pixels wide and 32 pixels tall. Each pixel can be on or off.
+     * In other words, each pixel is a boolean value, or a bit.
+     * */
+    unsigned char display[64 * 32];
 
 
 
