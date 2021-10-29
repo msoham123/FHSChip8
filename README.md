@@ -11,11 +11,24 @@ There are a number of classic video games ported to CHIP-8, such as Pong, Space 
 
 ## Contribute
 
-For classes, use PascalCase. For variables and and methods, use camelCase. Constants should be upper case. Create header files for any classes you create. 
+For classes, use PascalCase. For variables and and methods, use CamelCase. Constants should be upper case. Create header files for any classes you create. 
 
 Clone the project, checkout to a new branch, and submit a PR which will then be reviewed before being merged into master. A PR must address an issue. If there isn't one, create a new issue and mention it in your PR.
 
 ## Usage
 
-With a clone of the repo, C++23, and CMAKE, you can run this project by manually using CMAKE build or use CLion. 
+With a clone of the repo, C++23, and CMAKE, you can run this project by manually using CMAKE or use CLion. 
+
+## Credits
+
+This is purely intended as a learning experience, so we are using a lot of external resources:
+
+- [Guide to Making a CHIP-8 Emulator](https://tobiasvl.github.io/blog/write-a-chip-8-emulator/#fetchdecodeexecute-loop)
+- [How to write an emulator (CHIP-8 interpreter)](https://multigesture.net/articles/how-to-write-an-emulator-chip-8-interpreter/)
+- [Wikipedia](https://en.wikipedia.org/wiki/CHIP-8#Virtual_machine_description)
+
+Additional useful resources:
+
+- [Bitwise Operations](https://en.wikipedia.org/wiki/Bitwise_operation)
+- [Opcode](https://en.wikipedia.org/wiki/Opcode)
 
