@@ -28,6 +28,9 @@ class Core {
     // An 8-bit delay timer which is decremented at a rate of 60 Hz (60 times per second) until it reaches 0
     unsigned char delayTimer;
 
+    // An 8-bit sound timer which functions like the delay timer, but which also gives off a beeping sound as long as it’s not 0
+    unsigned char soundTimer;
+
     // The Chip-8 has 35 opcodes, or 35 operations, each two bytes (16 bits) long
     unsigned short opcode;
 
@@ -36,6 +39,8 @@ class Core {
      * 0 through F hexadecimal (0 through 15 in decimal) called V0 through VF
      * */
     unsigned char variableRegisters[16];
+
+
 
 };
 
