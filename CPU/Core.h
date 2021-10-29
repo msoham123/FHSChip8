@@ -25,6 +25,9 @@ class Core {
     // A stack pointer points to the level of the stack which is being used
     unsigned short SP;
 
+    // An 8-bit delay timer which is decremented at a rate of 60 Hz (60 times per second) until it reaches 0
+    unsigned char delayTimer;
+
     // The Chip-8 has 35 opcodes, or 35 operations, each two bytes (16 bits) long
     unsigned short opcode;
 
