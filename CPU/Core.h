@@ -1,7 +1,6 @@
 #ifndef FHSCHIP8_CORE_H
 #define FHSCHIP8_CORE_H
 
-
 class Core {
 
     // The Chip-8 has 4 kilobytes of memory
@@ -40,6 +39,8 @@ class Core {
      * */
     unsigned char variableRegisters[16];
 
+    // The Chip-8 has a HEX based keypad (Ox0-0xF) in which we store the current state of the key
+    unsigned char key[16];
 
 
 };
