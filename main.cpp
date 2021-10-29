@@ -1,4 +1,3 @@
-#include <iostream>
 #include "CPU/Core.h"
 
 using namespace std;
