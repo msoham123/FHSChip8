@@ -1,4 +1,5 @@
 #include "Core.h"
+#include <iostream>
 
 void Core::initialize() {
 
@@ -14,10 +15,10 @@ void Core::fetch() {
     opcode = memory[programCounter] << 8 | memory[programCounter+1];
 }
 
-void Core::decode() {
-
-}
-
-void Core::execute() {
-
+void Core::decodeAndExecute() {
+    // Get first nibble by masking opcode using AND bitwise operation
+    switch (opcode & 0xF000) {
+        default:
+            std::cout << "Error: Unknown Opcode " << opcode << std::endl;
+    }
 }
