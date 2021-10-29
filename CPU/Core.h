@@ -19,6 +19,12 @@ class Core {
     // One 16-bit index register called I which is used to point at locations in memory
     unsigned short I;
 
+    // A stack for 16-bit addresses, which is used to call subroutines/functions and return from them
+    unsigned short stack[16];
+
+    // A stack pointer points to the level of the stack which is being used
+    unsigned short SP;
+
     // The Chip-8 has 35 opcodes, or 35 operations, each two bytes (16 bits) long
     unsigned short opcode;
 
