@@ -19,6 +19,9 @@ class Core {
     // One 16-bit index register called I which is used to point at locations in memory
     unsigned short I;
 
+    // A program counter, often called PC, which points at the current instruction in memory
+    unsigned short PC;
+
 
 
 
