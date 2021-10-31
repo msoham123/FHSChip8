@@ -39,8 +39,18 @@ void Core::execute() {
 }
 
 void Core::updateDelayTimer() {
-    // Remember that delay timer counts down until 0 from 60 Hz
+    // Remember that delay timer counts down until 0 at 60 Hz
     if(delayTimer>0){
         delayTimer--;
+    }
+}
+
+void Core::updateSoundTimer(){
+    // Remember that sound timer counts down until 0 at 60 Hz
+    if(soundTimer>0){
+        if(soundTimer==1){
+            std::cout << "Sound Timer Activated!" << std::endl;
+        }
+        soundTimer--;
     }
 }
