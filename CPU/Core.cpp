@@ -18,6 +18,11 @@ void Core::initialize() {
     // Reset index register
     indexRegister = 0;
 
+    // Reset stack
+    for(int i = 0; i < 16; i++){
+        stack[i] = 0;
+    }
+
     // Reset all variable registers
     for(int i = 0; i < 16; i++){
         variableRegisters[i] = 0;
