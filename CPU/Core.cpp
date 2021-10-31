@@ -2,6 +2,49 @@
 #include <iostream>
 
 void Core::initialize() {
+    // Clear memory
+    for(int i = 0; i < 4096; i++){
+        memory[i] = 0;
+    }
+
+    // Reset display
+    for(int i = 0; i < (64*32); i++){
+        display[i] = 0;
+    }
+
+    // Reset program counter (starts at 0x200)
+    programCounter = 0x200;
+
+    // Reset index register
+    indexRegister = 0;
+
+    // Reset stack, variable registers, and keypad
+    for(int i = 0; i < 16; i++){
+        stack[i] = 0;
+        variableRegisters[i] = 0;
+        key[i] = 0;
+    }
+
+    // Reset stack pointer
+    stackPointer = 0;
+
+    // Reset timers
+    delayTimer = 0;
+    soundTimer = 0;
+
+    // Reset opcode
+    opcode = 0;
+
+    // Load font set into memory starting at 0x50 to 0x09F
+    for(int i = 80; i<160; i++){
+        memory[i] = fontSet[i];
+    }
+
+    // Reset nibbles
+    F = 0;
+    X = 0;
+    Y = 0;
+    N = 0
 
 }
 
