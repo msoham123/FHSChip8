@@ -13,6 +13,9 @@ void Core::fetch() {
     // Remember that opcodes are 16 bit types
     // Fetch 8-bit address, shift it by 8, and merge using OR bitwise operation
     opcode = memory[programCounter] << 8 | memory[programCounter+1];
+
+    // Increment program counter by 2 to be ready to fetch next opcode
+    programCounter += 2;
 }
 
 void Core::decode(){
