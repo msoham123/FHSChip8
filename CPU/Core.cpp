@@ -25,13 +25,13 @@ void Core::fetch() {
 
 void Core::decode(){
     // Extract nibble F
-    F = opcode & 0xF000;
+    F = (opcode & 0xF000) >> 12;
     // Extract nibble X
-    X = opcode & 0x0F00;
+    X = (opcode & 0x0F00) >> 8;
     // Extract nibble Y
-    Y = opcode & 0x0F0F;
+    Y = (opcode & 0x00F0) >> 4;
     // Extract nibble Z
-    N = opcode & 0x00FF;
+    N = opcode & 0x000F;
 }
 
 
