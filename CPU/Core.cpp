@@ -6,7 +6,12 @@ void Core::initialize() {
 }
 
 void Core::emulateCycle() {
-
+    // CPU Cycle = Fetch-Decode-Execute and then update timers
+    fetch();
+    decode();
+    execute();
+    updateDelayTimer();
+    updateSoundTimer();
 }
 
 void Core::fetch() {
