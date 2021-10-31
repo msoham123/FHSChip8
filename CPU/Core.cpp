@@ -40,6 +40,12 @@ void Core::initialize() {
         memory[i] = fontSet[i];
     }
 
+    // Reset nibbles
+    F = 0;
+    X = 0;
+    Y = 0;
+    N = 0
+
 }
 
 void Core::emulateCycle() {
