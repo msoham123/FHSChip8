@@ -30,6 +30,9 @@ void Core::initialize() {
     delayTimer = 0;
     soundTimer = 0;
 
+    // Reset opcode
+    opcode = 0;
+
     // Reset all variable registers
     for(int i = 0; i < 16; i++){
         variableRegisters[i] = 0;
