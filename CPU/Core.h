@@ -68,7 +68,8 @@ class Core {
 
     // Helper Methods
     void fetch();
-    void decodeAndExecute();
+    void decode();
+    void execute();
 
     public:
         void initialize();

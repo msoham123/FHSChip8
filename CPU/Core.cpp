@@ -13,7 +13,9 @@ void Core::fetch() {
     // Remember that opcodes are 16 bit types
     // Fetch 8-bit address, shift it by 8, and merge using OR bitwise operation
     opcode = memory[programCounter] << 8 | memory[programCounter+1];
+}
 
+void Core::decode(){
     // Extract nibble F
     F = opcode & 0xF000;
     // Extract nibble X
@@ -25,8 +27,7 @@ void Core::fetch() {
 }
 
 
-
-void Core::decodeAndExecute() {
+void Core::execute() {
     // Get first nibble by masking opcode using AND bitwise operation
     switch (F) {
         default:
