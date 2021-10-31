@@ -6,6 +6,11 @@ void Core::initialize() {
     for(int i = 0; i < 4096; i++){
         memory[i] = 0;
     }
+
+    // Reset index register
+    indexRegister = 0;
+
+
 }
 
 void Core::emulateCycle() {
