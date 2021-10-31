@@ -63,6 +63,9 @@ class Core {
             0xF0, 0x80, 0xF0, 0x80, 0x80  // F
             };
 
+    //All four nibbles decoded from the opcode (let F be the first nibble)
+    unsigned short F, X, Y, N;
+
     // Helper Methods
     void fetch();
     void decodeAndExecute();

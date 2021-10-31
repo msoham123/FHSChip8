@@ -13,11 +13,22 @@ void Core::fetch() {
     // Remember that opcodes are 16 bit types
     // Fetch 8-bit address, shift it by 8, and merge using OR bitwise operation
     opcode = memory[programCounter] << 8 | memory[programCounter+1];
+
+    // Extract nibble F
+    F = opcode & 0xF000;
+    // Extract nibble X
+    X = opcode & 0x0F00;
+    // Extract nibble Y
+    Y = opcode & 0x0F0F;
+    // Extract nibble Z
+    N = opcode & 0x00FF;
 }
+
+
 
 void Core::decodeAndExecute() {
     // Get first nibble by masking opcode using AND bitwise operation
-    switch (opcode & 0xF000) {
+    switch (F) {
         default:
             std::cout << "Error: Unknown Opcode " << opcode << std::endl;
     }
