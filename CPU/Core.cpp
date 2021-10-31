@@ -2,7 +2,10 @@
 #include <iostream>
 
 void Core::initialize() {
-
+    // Clear memory
+    for(int i = 0; i < 4096; i++){
+        memory[i] = 0;
+    }
 }
 
 void Core::emulateCycle() {
