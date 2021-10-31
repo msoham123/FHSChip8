@@ -26,6 +26,10 @@ void Core::initialize() {
     // Reset stack pointer
     stackPointer = 0;
 
+    // Reset timers
+    delayTimer = 0;
+    soundTimer = 0;
+
     // Reset all variable registers
     for(int i = 0; i < 16; i++){
         variableRegisters[i] = 0;
