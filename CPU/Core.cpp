@@ -35,6 +35,11 @@ void Core::initialize() {
     // Reset opcode
     opcode = 0;
 
+    // Load font set into memory starting at 0x50 to 0x09F
+    for(int i = 80; i<160; i++){
+        memory[i] = fontSet[i];
+    }
+
 }
 
 void Core::emulateCycle() {
