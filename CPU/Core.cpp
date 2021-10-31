@@ -37,3 +37,10 @@ void Core::execute() {
             std::cout << "Error: Unknown Opcode " << opcode << std::endl;
     }
 }
+
+void Core::updateDelayTimer() {
+    // Remember that delay timer counts down until 0 from 60 Hz
+    if(delayTimer>0){
+        delayTimer--;
+    }
+}

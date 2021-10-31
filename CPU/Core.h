@@ -70,6 +70,8 @@ class Core {
     void fetch();
     void decode();
     void execute();
+    void updateDelayTimer();
+    void updateSoundTimer();
 
     public:
         void initialize();
