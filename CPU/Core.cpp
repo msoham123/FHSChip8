@@ -7,6 +7,11 @@ void Core::initialize() {
         memory[i] = 0;
     }
 
+    // Reset display
+    for(int i = 0; i < (64*32); i++){
+        display[i] = 0;
+    }
+
     // Reset index register
     indexRegister = 0;
 
@@ -14,6 +19,8 @@ void Core::initialize() {
     for(int i = 0; i < 16; i++){
         variableRegisters[i] = 0;
     }
+
+
 
 }
 
