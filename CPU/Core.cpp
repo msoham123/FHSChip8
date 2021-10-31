@@ -12,6 +12,9 @@ void Core::initialize() {
         display[i] = 0;
     }
 
+    // Reset program counter (starts at 0x200)
+    programCounter = 0x200;
+
     // Reset index register
     indexRegister = 0;
 
