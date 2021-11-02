@@ -1,7 +1,7 @@
-#ifndef FHSCHIP8_CORE_H
-#define FHSCHIP8_CORE_H
+#ifndef FHSCHIP8_CPU_H
+#define FHSCHIP8_CPU_H
 
-class Core {
+class CPU {
 
     // The Chip-8 has 4 kilobytes of memory
     unsigned char memory[4096];

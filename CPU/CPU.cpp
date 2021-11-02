@@ -1,7 +1,7 @@
-#include "Core.h"
+#include "CPU.h"
 #include <iostream>
 
-void Core::initialize() {
+void CPU::initialize() {
     // Clear memory
     for(int i = 0; i < 4096; i++){
         memory[i] = 0;
@@ -48,7 +48,7 @@ void Core::initialize() {
 
 }
 
-void Core::emulateCycle() {
+void CPU::emulateCycle() {
     // CPU Cycle = Fetch-Decode-Execute and then update timers
     fetch();
     decode();
@@ -57,7 +57,7 @@ void Core::emulateCycle() {
     updateSoundTimer();
 }
 
-void Core::fetch() {
+void CPU::fetch() {
     // Remember that opcodes are 16 bit types
     // Fetch 8-bit address, shift it by 8, and merge using OR bitwise operation
     opcode = memory[programCounter] << 8 | memory[programCounter+1];
@@ -66,7 +66,7 @@ void Core::fetch() {
     programCounter += 2;
 }
 
-void Core::decode(){
+void CPU::decode(){
     // Extract nibble F
     F = (opcode & 0xF000) >> 12;
     // Extract nibble X
@@ -78,7 +78,7 @@ void Core::decode(){
 }
 
 
-void Core::execute() {
+void CPU::execute() {
     // Get first nibble by masking opcode using AND bitwise operation
     switch (F) {
         default:
@@ -86,14 +86,14 @@ void Core::execute() {
     }
 }
 
-void Core::updateDelayTimer() {
+void CPU::updateDelayTimer() {
     // Remember that delay timer counts down until 0 at 60 Hz
     if(delayTimer>0){
         delayTimer--;
     }
 }
 
-void Core::updateSoundTimer(){
+void CPU::updateSoundTimer(){
     // Remember that sound timer counts down until 0 at 60 Hz
     if(soundTimer>0){
         if(soundTimer==1){

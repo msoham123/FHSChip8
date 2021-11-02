@@ -1,4 +1,4 @@
-#include "CPU/Core.h"
+#include "CPU/CPU.h"
 
 using namespace std;
 
@@ -26,7 +26,7 @@ int main(int argc, char **arcgv) {
      *   }
      */
 
-    Core core;
+    CPU core;
 
     return 0;
 }
