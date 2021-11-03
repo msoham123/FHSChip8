@@ -44,7 +44,7 @@ void CPU::initialize() {
     F = 0;
     X = 0;
     Y = 0;
-    N = 0
+    N = 0;
 
 }
 
