@@ -87,9 +87,6 @@ void CPU::execute() {
             unsigned const short x = variableRegisters[X >> 8];
             unsigned const short y = variableRegisters[Y >> 4];
 
-            // Get the height value from N
-            unsigned const short height = N;
-
             // Set VF to zero
             variableRegisters[0xF] = 0;
 
@@ -97,7 +94,7 @@ void CPU::execute() {
             unsigned short bit;
 
             // Loop through n number of rows
-            for(unsigned int n = 0; n < height; n++){
+            for(unsigned int n = 0; n < N; n++){
                 // Get the Nth byte of sprite data, counting from the memory address in the index register
                 bit = memory[indexRegister+n];
 
