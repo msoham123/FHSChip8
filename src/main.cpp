@@ -1,8 +1,10 @@
 #include "CPU/CPU.h"
+#include <SDL2/SDL.h>
 
 using namespace std;
 
-int main(int argc, char **arcgv) {
+
+int main(int argc, char** arcgv) {
     /* Pseudocode Implementation (Implement as development progresses)
      *
      *  // Set up render system and register input callbacks
