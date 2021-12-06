@@ -1,0 +1,3 @@
+C:/Users/arjoo/source/repos/FHSChip8/out/build/x64-Debug/CMakeFiles/FHSChip8.dir
+C:/Users/arjoo/source/repos/FHSChip8/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/arjoo/source/repos/FHSChip8/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
