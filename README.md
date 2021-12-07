@@ -32,7 +32,10 @@ Ensure that the following settings look accurate to your own configuration.
 ![image](https://user-images.githubusercontent.com/51520568/145116545-f5d6d462-096c-43d2-926f-ca198aca57d9.png)
 ![image](https://user-images.githubusercontent.com/51520568/145116584-381023c1-982e-4693-8fff-3c9f6063133d.png)
 
-6). You should be able to click on Run (the green arrow) and run this project on your machine!
+6). You should be able to click on Run (the green arrow) and run this project on your machine! Make sure type is set to x64.
+
+![image](https://user-images.githubusercontent.com/51520568/145118321-2dfb51fa-cb31-4139-83bf-b053fdda8124.png)
+![image](https://user-images.githubusercontent.com/51520568/145118245-ad4cea5c-73c6-4cdb-a148-67e5d90beaaa.png)
 
 ## Credits
 
