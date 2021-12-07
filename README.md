@@ -21,9 +21,9 @@ Clone the project, checkout to a new branch, and submit a PR which will then be 
 2). Clone this repo.
 3). Install SDL 2 from [here](https://www.libsdl.org/download-2.0.php). Make sure you install the *Visual C++ 32/64-bit* edition. Extract the download and move it to ```C:\SDL\SDL2```. 
 4). Open the actual ```FHSChip8Graphics.vcxproj``` file. In the repo the file is located in, the path to this file is ```FHSChip8/src/FHSChip8Graphics.vcxproj```. This file should open a workspace in Visual Studio 2019.
-5). Verify that SDL2 is linked to the project locally. Right click on src in the file menu in Visual Studio 2019 and click Properties. 
+5). Verify that SDL2 is linked to the project locally. Right click on FHSChip8Graphics in the file menu in Visual Studio 2019 and click Properties. 
 
-
+![image](https://user-images.githubusercontent.com/51520568/145117971-3f6570c3-9089-4c6e-bc26-86d062b156a7.png)
 
 Ensure that the following settings look accurate to your own configuration.
 
