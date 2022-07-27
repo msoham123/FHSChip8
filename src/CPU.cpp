@@ -142,6 +142,8 @@ bool* CPU::getDisplayArray() {
     return display;
 }
 
+     
+
 // FINISH IMPLEMENTING
 void CPU::loadGame(const char* gameName) {
    /*
