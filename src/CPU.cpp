@@ -79,15 +79,18 @@ void CPU::decode() {
 
 void CPU::execute() {
     // Get first nibble by masking opcode using AND bitwise operation
-    F = 0x00E0;
+    F = 0x00E0; // FOR TESTING ONLY, REMOVE LATER
     switch (F) {
-        //Clear screen instruction which turns all pixels off
+    // Clear screen instruction which turns all pixels off
     case (0x00E0):
-            for (int i = 0; i < 64 * 32; i++) {
-               display[i] = false;
-            }
-            break;
-    case 0xD000: {
+        for (int i = 0; i < 64 * 32; i++) {
+            display[i] = false;
+        }
+        break;
+    // Jump screen instruction whic
+    case 0x1000:
+
+    case (0xD000): {
         // Get the X and Y coordinates from VX and VY
         unsigned const short x = variableRegisters[X >> 8];
         unsigned const short y = variableRegisters[Y >> 4];
@@ -115,7 +118,8 @@ void CPU::execute() {
                 }
             }
         }
-        break;
+        break; 
+    }
     default:
         std::cout << "Error: Unknown Opcode " << opcode << std::endl;
     }
@@ -142,8 +146,7 @@ bool* CPU::getDisplayArray() {
     return display;
 }
 
-     
-
+    
 // FINISH IMPLEMENTING
 void CPU::loadGame(const char* gameName) {
    /*
