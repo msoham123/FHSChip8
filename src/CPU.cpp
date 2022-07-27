@@ -87,6 +87,35 @@ void CPU::execute() {
                display[i] = false;
             }
             break;
+    case 0xD000: {
+        // Get the X and Y coordinates from VX and VY
+        unsigned const short x = variableRegisters[X >> 8];
+        unsigned const short y = variableRegisters[Y >> 4];
+
+        // Set VF to zero
+        variableRegisters[0xF] = 0;
+
+        //Initialize bit value
+        unsigned short bit;
+
+        // Loop through n number of rows
+        for (unsigned int n = 0; n < N; n++) {
+            // Get the Nth byte of sprite data, counting from the memory address in the index register
+            bit = memory[indexRegister + n];
+
+            // Loop through each of the 8 bits in this sprite row
+            for (unsigned int i; i < 8; i++) {
+                /* If the current pixel is on and the pixel at coordinates X,Y
+                on the screen is also on turn off the pixel and set VF to 1 */
+                if ((bit & (0x80 >> i)) != 0) {
+                    if (display[x + i + ((y + n) * 64)]) {
+                        variableRegisters[0xF] = 1;
+                    }
+                    display[x + i + ((y + n) * 64)] = display[x + i + ((y + n) * 64)] ^ 1;
+                }
+            }
+        }
+        break;
     default:
         std::cout << "Error: Unknown Opcode " << opcode << std::endl;
     }

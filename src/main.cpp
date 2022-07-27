@@ -43,11 +43,6 @@ int main(int argc, char **arcgv) {
 
     setupGraphics();
 
-
-    for (int i = 0; i < 64 * 32; i++) {
-        *(CORE.getDisplayArray()+i) = true;
-    }
-
     CORE.emulateCycle();
 
     // Example (Comment Out When Not Used) - Renders FHS
