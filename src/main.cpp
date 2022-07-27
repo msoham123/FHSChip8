@@ -5,7 +5,6 @@
 #include <cstdlib>
 #include <iostream>
 
-
 Display WINDOW;
 CPU CORE;
 
@@ -61,7 +60,7 @@ void checkKeyStates(SDL_Event event) {
 }
 
 int main(int argc, char **arcgv) {
-    
+   
     /* Pseudocode Implementation (Implement as development progresses)
      *
      *  // Set up render system and register input callbacks
@@ -89,6 +88,8 @@ int main(int argc, char **arcgv) {
     CORE.initialize();
 
     setupGraphics();
+
+    CORE.emulateCycle();
 
     // Example (Comment Out When Not Used) - Renders FHS
 
