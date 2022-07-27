@@ -4,7 +4,6 @@
 #include "SDL.h"
 #include <cstdlib>
 
-
 Display WINDOW;
 CPU CORE;
 
@@ -15,7 +14,7 @@ void setupGraphics() {
 }
 
 int main(int argc, char **arcgv) {
-    
+   
     /* Pseudocode Implementation (Implement as development progresses)
      *
      *  // Set up render system and register input callbacks
@@ -43,6 +42,13 @@ int main(int argc, char **arcgv) {
     CORE.initialize();
 
     setupGraphics();
+
+
+    for (int i = 0; i < 64 * 32; i++) {
+        *(CORE.getDisplayArray()+i) = true;
+    }
+
+    CORE.emulateCycle();
 
     // Example (Comment Out When Not Used) - Renders FHS
 

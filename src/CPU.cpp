@@ -79,7 +79,14 @@ void CPU::decode() {
 
 void CPU::execute() {
     // Get first nibble by masking opcode using AND bitwise operation
+    F = 0x00E0;
     switch (F) {
+        //Clear screen instruction which turns all pixels off
+    case (0x00E0):
+            for (int i = 0; i < 64 * 32; i++) {
+               display[i] = false;
+            }
+            break;
     default:
         std::cout << "Error: Unknown Opcode " << opcode << std::endl;
     }
