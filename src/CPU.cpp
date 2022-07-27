@@ -83,7 +83,7 @@ void CPU::execute() {
     switch (F) {
     // Clear screen instruction which turns all pixels off
     case (0x00E0):
-        for (int i = 0; i < 64 * 32; i++) {
+        for (unsigned int i = 0; i < 64 * 32; i++) {
             display[i] = false;
         }
         break;
@@ -107,7 +107,7 @@ void CPU::execute() {
             bit = memory[indexRegister + n];
 
             // Loop through each of the 8 bits in this sprite row
-            for (unsigned int i; i < 8; i++) {
+            for (unsigned int i = 0; i < 8; i++) {
                 /* If the current pixel is on and the pixel at coordinates X,Y
                 on the screen is also on turn off the pixel and set VF to 1 */
                 if ((bit & (0x80 >> i)) != 0) {
