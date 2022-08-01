@@ -9,10 +9,6 @@
 #define SCREEN_WIDTH 64
 #define SCREEN_HEIGHT 32
 
-SDL_Window* window;
-SDL_Renderer* renderer;
-
-
 
 void Display::initDisplay(bool* displayBools) {
 

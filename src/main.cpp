@@ -3,14 +3,60 @@
 #include <cstdio>
 #include "SDL.h"
 #include <cstdlib>
+#include <iostream>
 
 Display WINDOW;
 CPU CORE;
 
 using namespace std;
 
+bool KEYS[322] = { false };
+bool keyStates[4][4] = { false };
+
 void setupGraphics() {
     WINDOW.initDisplay(CORE.getDisplayArray());
+}
+
+void setUpInput() {
+    
+}
+
+void checkKeyStates(SDL_Event event) {
+    KEYS[event.key.keysym.sym] = true;
+    if (KEYS[SDLK_1]) {
+        keyStates[0][0] = true;
+        cout << "1 pressed" << endl;
+    } else if (KEYS[SDLK_2]) {
+        keyStates[0][1] = true;
+    } else if (KEYS[SDLK_3]) {
+        keyStates[0][2] = true;
+    } else if (KEYS[SDLK_4]) {
+        keyStates[0][3] = true;
+    } else if (KEYS[SDLK_q]) {
+        keyStates[1][0] = true;
+    } else if (KEYS[SDLK_w]) {
+        keyStates[1][1] = true;
+    } else if (KEYS[SDLK_e]) {
+        keyStates[1][2] = true;
+    } else if (KEYS[SDLK_r]) {
+        keyStates[1][3] = true;
+    } else if (KEYS[SDLK_a]) {
+        keyStates[2][0] = true;
+    } else if (KEYS[SDLK_s]) {
+        keyStates[2][1] = true;
+    } else if (KEYS[SDLK_d]) {
+        keyStates[2][2] = true;
+    } else if (KEYS[SDLK_f]) {
+        keyStates[2][3] = true;
+    } else if (KEYS[SDLK_z]) {
+        keyStates[3][0] = true;
+    } else if (KEYS[SDLK_x]) {
+        keyStates[3][1] = true;
+    } else if (KEYS[SDLK_c]) {
+        keyStates[3][2] = true;
+    } else if (KEYS[SDLK_v]) {
+        keyStates[3][3] = true;
+    }
 }
 
 int main(int argc, char **arcgv) {
@@ -117,8 +163,10 @@ int main(int argc, char **arcgv) {
             case SDL_QUIT:
                 running = false;
                 break;
-
             default:
+                if (event.type == SDL_KEYDOWN) {
+                    checkKeyStates(event);
+                }
                 break;
             }
         }
